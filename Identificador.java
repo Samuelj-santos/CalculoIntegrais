@@ -9,5 +9,11 @@ public class Identificador {
         this.funcao = funcao;
         
     }
-
+    public void transformarArray(){
+        int i; 
+        int tam = this.funcao.length();
+        for(i=0;i<tam;i++){
+            array[i] = this.funcao.charAt(i);
+        }
+    }
 }
