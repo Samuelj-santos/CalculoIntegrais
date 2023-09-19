@@ -15,9 +15,8 @@ public class SomaRieman {
 
 
     public void inPole(double a ,double b){
-      //nao entendo pq da 0 
-     // explicaçãoa: é uma formula para ver os subintervalos
-     // o c nao deveria dar zero é da formula eu so modifiquei ela one
+      //por algo motivo  ele nao calcula numeros negativos,ele transforma em positivo,talvez seja problema de espaço
+      //limitar as casas do double pode solucionar
      
         double f = 0.0;
         this.r = a +(this.subIntervalos-2);
@@ -31,9 +30,10 @@ public class SomaRieman {
         }
 
         double deltaX = (b-a)/(this.subIntervalos-1);
-
+        double y =0;
         for(int j =0;j<this.dados.length-1;j++){
-          double y = this.dados[j+1] - this.dados[j];
+            y =0;
+           y = this.dados[j+1] - this.dados[j];
           f  = f+ ((y)  * deltaX);
         }
         System.out.println(f);
