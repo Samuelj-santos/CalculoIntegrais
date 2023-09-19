@@ -19,7 +19,7 @@ public class SomaRieman {
      // explicaçãoa: é uma formula para ver os subintervalos
      // o c nao deveria dar zero é da formula eu so modifiquei ela one
      
-     
+        double f = 0.0;
         this.r = a +(this.subIntervalos-2);
         double c  = b/this.r;
         this.dados[0] = a;
@@ -30,8 +30,16 @@ public class SomaRieman {
         
         }
 
+        double deltaX = (b-a)/(this.subIntervalos-1);
+
+        for(int j =0;j<this.dados.length-1;j++){
+          double y = this.dados[j+1] - this.dados[j];
+          f  = f+ ((y)  * deltaX);
+        }
+        System.out.println(f);
+        
     }
 
-    
+
 
 }
