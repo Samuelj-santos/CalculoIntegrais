@@ -15,8 +15,7 @@ public class SomaRieman {
 
 
     public void inPole(double a ,double b){
-      //por algo motivo  ele nao calcula numeros negativos,ele transforma em positivo,talvez seja problema de espaço
-      //limitar as casas do double pode solucionar
+     // esta errado, finalizar quando fizer o identificador
      
         double f = 0.0;
         this.r = a +(this.subIntervalos-2);

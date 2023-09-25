@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 public class Teste {
     public static void main(String[] args) {
-        SomaRieman one = new SomaRieman(8);
+        SomaRieman one = new SomaRieman(100);
         
-        one.inPole(-1,3);
+        ArrayList<String> função = new ArrayList<>();
     }
 }
