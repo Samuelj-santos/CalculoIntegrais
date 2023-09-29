@@ -1,16 +1,32 @@
 public class Identificador {
-    //usar programação por blocos 
-    //usar split 
-    private String funcao;
    
-    public Identificador(String funcao) {
-        this.funcao = funcao;
+
+    public double polinomialPrimeiroGrau(int multiplicador , char operador , int segundoNumero , double x){
+        double  result;
+      if (operador == '+') {
+        result = (multiplicador*x) + segundoNumero;
+      }else{
+       result = (multiplicador*x) - segundoNumero;
+      }
+      return result;
     }
 
-    private void split( String a ){
-     String[]  funçãoSplit;
-     
+    public double polinomialSegundoGrau(int multiplicador, char operador,int multiplicadorTwo,char operadortwo,int c , double x  , int potencia , int potenciaTwo){
+        double result = 0;
+        if (operador == '+' && operadortwo == '+') {
+            result = (multiplicador*(Math.pow(x, potencia))) + (multiplicadorTwo*x) + c;
 
+        }else if (operador == '+' && operadortwo == '-') {
+              result = (multiplicador*(Math.pow(x, potencia))) + (multiplicadorTwo*(Math.pow(x, potenciaTwo))) - c;
+
+        }else if (operador == '-' && operadortwo == '+') {
+              result = (multiplicador*(Math.pow(x, potencia))) - (multiplicadorTwo*(Math.pow(x, potenciaTwo))) + c;
+
+        }else if (operador == '-' && operadortwo == '-') {
+              result = (multiplicador*(Math.pow(x, potencia))) - (multiplicadorTwo*(Math.pow(x, potenciaTwo))) - c;
+        }
+
+        return result;
     }
    
 
