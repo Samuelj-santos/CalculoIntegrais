@@ -43,7 +43,7 @@ public class Main {
             int m = Integer.parseInt(JOptionPane.showInputDialog(null,"Insira o c"));
 
             double resultTwo = 0.0;
-            for(int y =0;i<subs.length;y++){
+            for(int y =0;y<subs.length;y++){
               double parcialTwo =  (identificador.polinomialSegundoGrau(g,i,j,l,m,subs[y],h,k)*somaRieman.deltaX);
             resultTwo = resultTwo + parcialTwo;
                JOptionPane.showMessageDialog(null, "Dado o  subintervalo " + subs[y] +" o  resultado é "+ parcialTwo  );
