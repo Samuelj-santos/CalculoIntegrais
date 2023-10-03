@@ -60,7 +60,36 @@ public class Main {
             result = result + partialThree;
         }
          JOptionPane.showMessageDialog(null,"Seu resultado final é " + result);
-    }
+
+    } else if (input.equals("Trigonometrica")) {
+        String[] opçõesThree  = {"Seno" , "Cosseno" , "Tangente"};
+         String tipoTrigonometrica = (String) JOptionPane.showInputDialog(null,"Selecione a opçaõ que deseja" , "Opções " , JOptionPane.QUESTION_MESSAGE,null,opçõesThree,opçõesThree[0]);
+            double somaFour = 0.0;
+            double somaFive = 0.0;
+            double somaSix = 0.0;
+         if (tipoTrigonometrica.equals("Seno")) {
+          for(int one = 0;one<subs.length;one++){
+            double parcialFour = Math.sin(subs[one]) * somaRieman.deltaX;
+             somaFour = somaFour + parcialFour;
+          }
+           JOptionPane.showMessageDialog(null,"Seu resultado final é " + somaFour);
+
+         }else if (tipoTrigonometrica.equals("Cosseno")) {
+           for(int two = 0;two<subs.length;two++){
+            double parcialFour = Math.cos(subs[two]) * somaRieman.deltaX;
+             somaFive  = somaFive + parcialFour;
+          }
+           JOptionPane.showMessageDialog(null,"Seu resultado final é " + somaFive );
+         }else if (tipoTrigonometrica.equals("Tangente")) {
+
+           for(int three = 0;three<subs.length;three++){
+            double parcialFour = Math.tan(subs[three]) * somaRieman.deltaX;
+             somaSix = somaSix + parcialFour;
+          }
+           JOptionPane.showMessageDialog(null,"Seu resultado final é " + somaSix );
+          
+         }
+     }
 
 
     }
