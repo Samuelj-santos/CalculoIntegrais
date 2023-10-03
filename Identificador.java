@@ -28,6 +28,11 @@ public class Identificador {
 
         return result;
     }
+
+    public double euler(double subs){
+       double result = Math.exp(subs);
+       return result ;
+    }
    
 
 }

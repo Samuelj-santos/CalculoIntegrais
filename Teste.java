@@ -13,7 +13,7 @@ public class Teste {
           SomaRieman somaRieman = new SomaRieman(subIntervalos, b, a);
           double[] sub = somaRieman.inPole();
           System.out.println("Para calcular a sua funçaõ siga as instruções");
-
+        
        while (s.hasNext()) {
         
           System.out.println("Qual o tipo da funçaõ ");

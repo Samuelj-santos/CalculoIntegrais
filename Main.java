@@ -7,7 +7,7 @@ public class Main {
         //Main provisoria
         Identificador identificador = new Identificador();
        JOptionPane .showMessageDialog(null, "Bem vindo");
-       String[] opções = {"Polinomial" , "Trigonometrica"};
+       String[] opções = {"Polinomial" , "Trigonometrica" , "Euler"};
        int b = Integer.parseInt(JOptionPane.showInputDialog(null,"Insira o limite superior"));
        int a = Integer.parseInt(JOptionPane.showInputDialog(null,"Insira o limite inferior"));
         int c = Integer.parseInt(JOptionPane.showInputDialog(null,"Insira a quantidade de subintervalos"));
@@ -28,7 +28,7 @@ public class Main {
            for(int i =0;i<subs.length;i++){
               double parcial =  (identificador.polinomialPrimeiroGrau(d,e,f,subs[i] )*somaRieman.deltaX);
             result = result + parcial;
-               JOptionPane.showMessageDialog(null, "Dado o  subintervalo " + subs[i] +" o  resultado é "+ parcial  );
+                JOptionPane.showMessageDialog(null, "Dado o  subintervalo " + subs[i] +" o  resultado é "+ parcial  );
            }
 
            JOptionPane.showMessageDialog(null,"Seu resultado final é " + result);
@@ -43,16 +43,23 @@ public class Main {
             int m = Integer.parseInt(JOptionPane.showInputDialog(null,"Insira o c"));
 
             double resultTwo = 0.0;
-            for(int y =0;y<subs.length;y++){
+            for(int y =0;y<subs.length-1;y++){
               double parcialTwo =  (identificador.polinomialSegundoGrau(g,i,j,l,m,subs[y],h,k)*somaRieman.deltaX);
             resultTwo = resultTwo + parcialTwo;
-               JOptionPane.showMessageDialog(null, "Dado o  subintervalo " + subs[y] +" o  resultado é "+ parcialTwo  );
+              // JOptionPane.showMessageDialog(null, "Dado o  subintervalo " + subs[y] +" o  resultado é "+ parcialTwo  );
            }
            JOptionPane.showMessageDialog(null,"Seu resultado final é " + resultTwo);
-
+           
          }
-    } else if (input.equals("Polinomial")) {
-        
+    } else if (input.equals("Euler")) {
+      double result = 0.0;
+      double partialThree = 0.0;
+        for(int var =0;var<subs.length-1;var++){
+           partialThree = (identificador.euler(subs[var]));
+           JOptionPane.showMessageDialog(null, "Dado o  subintervalo " + subs[var] +" o  resultado é "+ partialThree  );
+            result = result + partialThree;
+        }
+         JOptionPane.showMessageDialog(null,"Seu resultado final é " + result);
     }
 
 
